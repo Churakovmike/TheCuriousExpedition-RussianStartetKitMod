@@ -1,0 +1,58 @@
+{
+  modInfo:
+  {
+    id: russianExplorerKit
+    name: "Russian explorer kit"
+    authors: "Churakovmike"
+    version: "0.1"
+    description: "txt-mod-description"
+    enabled: true
+    mail: churakovmike@mail.ru
+	lang: en
+  },
+  imageData:[
+    {
+       id: vodka.png
+       file: russianExplorerKit/images/vodka.png
+    }
+  ],
+  modEntries:[
+    {
+     id: it-vodka
+     name: txt-it-vodka-name
+     description: txt-it-vodka-description
+     sprite: vodka.png
+     debugCategory: sanity
+     value: 2
+     maxStack: 20
+     useEvents: [
+       {
+         slots:1
+         sanity:50
+         playSound: ["sfx_eat_var1", "sfx_eat_var2"]
+         removeItem: true
+       }
+     ]
+    }
+    {
+      targetId: +il-harbor-rations::items
+      slots:2,it-vodka: 12
+    }
+	{
+      targetId: +il-harbor-rations::items
+      slots:3,it-vodka: 13
+    }
+	{
+      targetId: +il-harbor-rations::items
+      slots:4,it-vodka: 14
+    }
+	{
+      targetId: +il-harbor-rations::items
+      slots:5,it-vodka: 15
+    }
+	{
+      targetId: +il-harbor-rations::items
+      slots:6,it-vodka: 16
+    }
+  ]
+}
